@@ -1,0 +1,23 @@
+﻿@model IEnumerable<MvcRefactor.Entity.User>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Users</h2>
+<div id="showDemo">
+    <ul>
+
+        <li class="col-1">ID</li>
+        <li class="col-2">UserName</li>
+        <li class="col-3">Role</li>
+        <li class="col-4">Status</li>
+
+        @foreach (var user in Model)
+        {
+            <li class="col-1">@user.UserId</li>
+            <li class="col-1">@user.UserName</li>
+            <li class="col-1">@user.Role</li>
+            <li class="col-1">@user.Enabled</li>
+        }
+    </ul>
+</div>

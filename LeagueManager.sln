@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeagueManager", "MvcRefactorTest\LeagueManager.csproj", "{7C1C9BC2-D3A8-4519-B5E7-C20CDD1D8AD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeagueManager.Data", "MvcRefactor.Data\LeagueManager.Data.csproj", "{97A3F683-35E0-47E8-9AE1-2D523B58A35C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeagueManager.Service", "MvcRefactor.Service\LeagueManager.Service.csproj", "{88A8EAFE-0DB6-4757-BCF7-3327BF49A5AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeagueManager.Logging", "MvcRefactor.Logging\LeagueManager.Logging.csproj", "{E3FA419F-0DED-431A-96EC-72A62ABECE47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeagueManager.Entity", "MvcRefactor.Entity\LeagueManager.Entity.csproj", "{8906E8A5-EE27-40E0-A84D-7DA72389E008}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C1C9BC2-D3A8-4519-B5E7-C20CDD1D8AD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C1C9BC2-D3A8-4519-B5E7-C20CDD1D8AD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C1C9BC2-D3A8-4519-B5E7-C20CDD1D8AD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C1C9BC2-D3A8-4519-B5E7-C20CDD1D8AD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97A3F683-35E0-47E8-9AE1-2D523B58A35C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97A3F683-35E0-47E8-9AE1-2D523B58A35C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97A3F683-35E0-47E8-9AE1-2D523B58A35C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97A3F683-35E0-47E8-9AE1-2D523B58A35C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88A8EAFE-0DB6-4757-BCF7-3327BF49A5AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88A8EAFE-0DB6-4757-BCF7-3327BF49A5AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88A8EAFE-0DB6-4757-BCF7-3327BF49A5AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88A8EAFE-0DB6-4757-BCF7-3327BF49A5AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3FA419F-0DED-431A-96EC-72A62ABECE47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3FA419F-0DED-431A-96EC-72A62ABECE47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3FA419F-0DED-431A-96EC-72A62ABECE47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3FA419F-0DED-431A-96EC-72A62ABECE47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8906E8A5-EE27-40E0-A84D-7DA72389E008}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8906E8A5-EE27-40E0-A84D-7DA72389E008}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8906E8A5-EE27-40E0-A84D-7DA72389E008}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8906E8A5-EE27-40E0-A84D-7DA72389E008}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

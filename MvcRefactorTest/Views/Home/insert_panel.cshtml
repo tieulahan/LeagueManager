@@ -1,0 +1,29 @@
+﻿@model  MvcRefactor.Entity.User
+@{
+    ViewBag.Title = "insert_panel";
+}
+
+@using (Html.BeginForm("Insert", "Home", FormMethod.Post, new { @id = "Insert-form" }))
+{
+    @Html.ValidationSummary(true)
+    <div class="row">
+        <div class="col-xs-2">
+            @Html.LabelFor(m => m.UserName, new { @style = "margin-left:5px" })
+            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Enabled, null, new { @style = "display:none" })
+        </div>
+        <div class="col-xs-2">
+            @Html.LabelFor(m => m.Role, new { @style = "margin-left:5px" })
+            @Html.TextBoxFor(m => m.Role, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Role, null, new { @style = "display:none" })
+        </div>
+        <div class="col-xs-2">
+            @Html.LabelFor(m => m.Enabled, new { @style = "margin-left:5px" })
+            @Html.CheckBoxFor(m => m.Enabled, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Enabled, null, new { @style = "display:none" })
+        </div>
+        <div class="col-xs-8">
+            <input type="submit" value="Create">
+        </div>
+    </div>
+}

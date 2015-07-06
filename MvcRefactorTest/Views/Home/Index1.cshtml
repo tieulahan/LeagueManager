@@ -1,0 +1,67 @@
+﻿@using System.Web.Helpers
+@{
+    var dataFilePath = "~/dataFile2.txt";
+    var usermodel = "[{name:'Chris Smith', role: 'Developer', enabled: true}, {name:'Awin George', role: 'Developer', enabled: false}, {name:'Richard Child', role: 'Developer', enabled: true}]";
+    var physicalPath = Server.MapPath(dataFilePath);
+    var userErrMsg = "";
+    var isPostBack = "false";
+
+    if (IsPost)
+    {
+        try
+        {
+            isPostBack = "true";
+            usermodel = File.ReadAllText(physicalPath);
+        }
+        catch (Exception ex)
+        {
+            userErrMsg = "Unable to retrieve users";
+        }
+    }
+    else
+    {
+        File.Delete(physicalPath);
+        File.AppendAllText(physicalPath, usermodel);
+    }
+}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>File Viewer</title>
+        <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>All Developers</h1>
+        <div id="fileContents">@usermodel</div>    
+        <div id="fileDisplay"></div>
+        <p>@userErrMsg</p>
+        <form method="POST" action="" >
+            <input type="Button" name="Submit" value="Load Users" onclick="OpenUserDetails();" style="color: #000;background: #ffa20f;border: 2px outset #d7b9c9"/>
+        </form>    
+        <script>
+
+            var m_isPostBack = eval("@Html.Raw(HttpUtility.HtmlDecode(@isPostBack))");
+            if (m_isPostBack == true) {
+                users = eval("@Html.Raw(HttpUtility.HtmlDecode(@usermodel))")
+                UserDetailDisplay = document.getElementById('fileDisplay')
+                
+                for (var user in users) {
+                    UserDetailDisplay.innerHTML = UserDetailDisplay.innerHTML + '<div class="panel panel-default">';
+                    if (users[user].enabled == true) {
+                        UserDetailDisplay.innerHTML = UserDetailDisplay.innerHTML + '<div class="panel-body"><h3>Name: ' + users[user].name + '</h3></br><h3>Role: ' + users[user].role + '</h3></br><h2 class="label label-success">Is working :' + users[user].enabled + '</h2></br></br></div>';
+                    } else {
+                        UserDetailDisplay.innerHTML = UserDetailDisplay.innerHTML + '<div class="panel-body"><h3>Name: ' + users[user].name + '</h3></br><h3>Role: ' + users[user].role + '</h3></br><h2 class="label label-danger">Is working :' + users[user].enabled + '</h2></br></br></div>';
+                    }
+                    UserDetailDisplay.innerHTML = UserDetailDisplay.innerHTML + '</div>';
+                }                
+            }
+
+            function OpenUserDetails()
+            {
+                document.forms[0].submit()
+            }
+        </script>       
+    </body>
+</html>
